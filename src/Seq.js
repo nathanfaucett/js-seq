@@ -1,11 +1,11 @@
 var Iterator = require("iterator"),
     defineProperty = require("define_property"),
     isNullOrUndefined = require("is_null_or_undefined"),
-    ITERATOR_SYMBOL = require("./ITERATOR_SYMBOL"),
     fromValue, EMPTY_SEQ, ArraySeq, ObjectSeq;
 
 
-var IS_SEQ = "__SEQ__",
+var ITERATOR_SYMBOL = typeof(Symbol) === "function" ? Symbol.iterator : false,
+    IS_SEQ = "__SEQ__",
     SeqPrototype;
 
 
@@ -67,4 +67,6 @@ SeqPrototype.iterator = function(reverse) {
     return this.__iterator(Iterator.VALUES, reverse);
 };
 
-SeqPrototype[ITERATOR_SYMBOL] = SeqPrototype.iterator;
+if (ITERATOR_SYMBOL) {
+    SeqPrototype[ITERATOR_SYMBOL] = SeqPrototype.iterator;
+}
