@@ -1,6 +1,6 @@
-var Iterator = require("iterator"),
-    defineProperty = require("define_property"),
-    isNullOrUndefined = require("is_null_or_undefined"),
+var Iterator = require("@nathanfaucett/iterator"),
+    defineProperty = require("@nathanfaucett/define_property"),
+    isNullOrUndefined = require("@nathanfaucett/is_null_or_undefined"),
     fromValue, EMPTY_SEQ, ArraySeq, ObjectSeq;
 
 

@@ -1,5 +1,5 @@
-var isArray = require("is_array"),
-    isObject = require("is_object");
+var isArray = require("@nathanfaucett/is_array"),
+    isObject = require("@nathanfaucett/is_object");
 
 
 module.exports = keyedFromValue;

@@ -1,6 +1,6 @@
-var inherits = require("inherits"),
-    Iterator = require("iterator"),
-    defineProperty = require("define_property"),
+var inherits = require("@nathanfaucett/inherits"),
+    Iterator = require("@nathanfaucett/iterator"),
+    defineProperty = require("@nathanfaucett/define_property"),
     IteratorSeq;
 
 

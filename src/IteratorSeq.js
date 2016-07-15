@@ -1,5 +1,5 @@
-var inherits = require("inherits"),
-    defineProperty = require("define_property"),
+var inherits = require("@nathanfaucett/inherits"),
+    defineProperty = require("@nathanfaucett/define_property"),
     ArraySeq;
 
 

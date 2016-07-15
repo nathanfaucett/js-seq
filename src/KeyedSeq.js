@@ -1,5 +1,5 @@
-var inherits = require("inherits"),
-    Iterator = require("iterator"),
+var inherits = require("@nathanfaucett/inherits"),
+    Iterator = require("@nathanfaucett/iterator"),
     keyedFromValue;
 
 

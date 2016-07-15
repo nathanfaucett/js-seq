@@ -1,5 +1,5 @@
 var tape = require("tape"),
-    Iterator = require("iterator"),
+    Iterator = require("@nathanfaucett/iterator"),
     Seq = require("..");
 
 

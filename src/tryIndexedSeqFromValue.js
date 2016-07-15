@@ -1,5 +1,5 @@
-var isArrayLike = require("is_array_like"),
-    Iterator = require("iterator"),
+var isArrayLike = require("@nathanfaucett/is_array_like"),
+    Iterator = require("@nathanfaucett/iterator"),
     isIterable = require("./isIterable"),
     IteratorSeq = require("./IteratorSeq"),
     ArraySeq = require("./ArraySeq");

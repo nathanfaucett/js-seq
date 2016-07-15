@@ -1,8 +1,8 @@
-var has = require("has"),
-    keys = require("keys"),
-    inherits = require("inherits"),
-    Iterator = require("iterator"),
-    defineProperty = require("define_property");
+var has = require("@nathanfaucett/has"),
+    keys = require("@nathanfaucett/keys"),
+    inherits = require("@nathanfaucett/inherits"),
+    Iterator = require("@nathanfaucett/iterator"),
+    defineProperty = require("@nathanfaucett/define_property");
 
 
 var ObjectSeqPrototype;

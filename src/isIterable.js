@@ -1,4 +1,4 @@
-var Iterator = require("iterator");
+var Iterator = require("@nathanfaucett/iterator");
 
 
 var hasIterator = Iterator.hasIterator;
