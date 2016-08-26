@@ -13,8 +13,8 @@ module.exports = tryIndexedSeqFromValue;
 
 function tryIndexedSeqFromValue(value) {
     return (
-        isArrayLike(value) ? new ArraySeq(value) :
         isIterable(value) ? new IteratorSeq(getIterator(value)()) :
+        isArrayLike(value) ? new ArraySeq(value) :
         void(0)
     );
 }
