@@ -1,4 +1,6 @@
-var Iterator = require("@nathanfaucett/iterator"),
+var apply = require("@nathanfaucett/apply"),
+    fastSlice = require("@nathanfaucett/fast_slice"),
+    Iterator = require("@nathanfaucett/iterator"),
     defineProperty = require("@nathanfaucett/define_property"),
     isNullOrUndefined = require("@nathanfaucett/is_null_or_undefined"),
     fromValue, EMPTY_SEQ, ArraySeq, ObjectSeq;
@@ -19,6 +21,10 @@ EMPTY_SEQ = require("./EMPTY_SEQ");
 
 
 function Seq(value) {
+    if (arguments.length > 1) {
+        value = fastSlice(arguments);
+    }
+
     return (
         isNullOrUndefined(value) ? EMPTY_SEQ :
         fromValue(value)
@@ -41,8 +47,8 @@ defineProperty(SeqPrototype, IS_SEQ, {
     value: true
 });
 
-Seq.of = function() {
-    return new Seq(arguments);
+Seq.of = function(value) {
+    return arguments.length > 1 ? apply(Seq, arguments) : Seq(value);
 };
 
 SeqPrototype.toSeq = function() {

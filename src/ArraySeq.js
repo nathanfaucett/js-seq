@@ -30,7 +30,7 @@ if (defineProperty.hasGettersSetters) {
 }
 
 ArraySeqPrototype.has = function(index) {
-    if (index >= 0 && index < this.__size) {
+    if (index >= 0 && index < this.size()) {
         return true;
     } else {
         return false;

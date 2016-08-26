@@ -12,7 +12,7 @@ global.Seq = Seq;
 
 
 tape("Seq(value: Array)", function(assert) {
-    var seq = Seq([0, 1, 2, 3]),
+    var seq = Seq.of([0, 1, 2, 3]),
         iterator = seq.iterator(),
         step, index = 0;
 
@@ -24,7 +24,7 @@ tape("Seq(value: Array)", function(assert) {
 });
 
 tape("Seq(value: Object)", function(assert) {
-    var seq = Seq({
+    var seq = Seq.of({
             a: 0,
             b: 1,
             c: 2
@@ -41,7 +41,7 @@ tape("Seq(value: Object)", function(assert) {
 
 tape("Seq(value: Iterator)", function(assert) {
     var array = [0, 1, 2, 3, 4],
-        seq = Seq({
+        seq = Seq.of({
             iterator: function() {
                 var index = 0,
                     length = array.length;
@@ -66,7 +66,7 @@ tape("Seq(value: Iterator)", function(assert) {
 });
 
 tape("Seq(value: ImmutableHashMap)", function(assert) {
-    var seq = Seq(HashMap.of({
+    var seq = Seq.of(HashMap.of({
             a: 0,
             b: 1,
             c: 2
@@ -82,7 +82,7 @@ tape("Seq(value: ImmutableHashMap)", function(assert) {
 });
 
 tape("Seq(value: ImmutableList)", function(assert) {
-    var seq = Seq(List.of([0, 1, 2, 3, 4])),
+    var seq = Seq.of(List.of([0, 1, 2, 3, 4])),
         iterator = seq.iterator(),
         step, index = 0;
 
@@ -99,7 +99,7 @@ tape("Seq(value: ImmutableHashMap)", function(assert) {
             b: 1,
             c: 2
         }),
-        seq = Seq(new TestRecord()),
+        seq = Seq.of(new TestRecord()),
         iterator = seq.iterator(),
         step, index = 0;
 
@@ -111,7 +111,7 @@ tape("Seq(value: ImmutableHashMap)", function(assert) {
 });
 
 tape("Seq(value: ImmutableSet)", function(assert) {
-    var seq = Seq(Set.of([0, 1, 2, 3, 4])),
+    var seq = Seq.of(Set.of([0, 1, 2, 3, 4])),
         iterator = seq.iterator(),
         step, index = 0;
 
@@ -123,7 +123,7 @@ tape("Seq(value: ImmutableSet)", function(assert) {
 });
 
 tape("Seq(value: ImmutableVector)", function(assert) {
-    var seq = Seq(Vector.of([0, 1, 2, 3, 4])),
+    var seq = Seq.of(Vector.of([0, 1, 2, 3, 4])),
         iterator = seq.iterator(),
         step, index = 0;
 
