@@ -1,6 +1,6 @@
 {
   "name": "@nathanfaucett/seq",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "create iteratable sequences from javascript objects",
   "repository": {
     "type": "git",
@@ -37,6 +37,7 @@
   "dependencies": {
     "@nathanfaucett/apply": "0.0.1",
     "@nathanfaucett/define_property": "^0.0.1",
+    "@nathanfaucett/fast_slice": "0.0.1",
     "@nathanfaucett/has": "^0.0.1",
     "@nathanfaucett/inherits": "^0.0.1",
     "@nathanfaucett/is_array": "^0.0.1",

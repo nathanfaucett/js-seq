@@ -8,7 +8,7 @@ var Seq = require("@nathanfaucett/seq");
 
 
 // Arrays
-var seq = Seq([0, 1, 2, 3]),
+var seq = Seq.of([0, 1, 2, 3]),
     iterator = seq.iterator(),
     step;
 
